@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GymSensei — Know every machine in your gym</title>
+<meta name="description" content="Point your camera at any gym machine and get the exercises, the form, and a plan built from the equipment your gym actually has.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0B; --surface:#161618; --surface-hi:#232326;
+    --stroke:#2A2A2E; --accent:#E6392E; --accent-hi:#FF5A4C;
+    --text:#F2F2F4; --dim:#96969E;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background:
+      radial-gradient(60rem 40rem at 82% 8%, rgba(104,34,28,.55), transparent 70%),
+      radial-gradient(50rem 36rem at 10% 92%, rgba(74,29,24,.45), transparent 70%);
+  }
+  .wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+  header{padding:1.75rem 0;position:sticky;top:0;background:rgba(10,10,11,.82);
+    backdrop-filter:blur(14px);border-bottom:1px solid var(--stroke);z-index:10}
+  .bar{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+  .mark{width:2.25rem;height:2.25rem;border-radius:.65rem;background:var(--surface);
+    border:1px solid var(--stroke);display:grid;place-items:center;flex:none}
+  .brand{font-weight:700;font-size:1.1rem;letter-spacing:-.01em}
+  nav{margin-left:auto;display:flex;gap:1.5rem;font-size:.92rem}
+  nav a{color:var(--dim);text-decoration:none}
+  nav a:hover{color:var(--text)}
+  .hero{padding:5.5rem 0 4rem;text-align:center}
+  h1{font-size:clamp(2.25rem,6vw,3.75rem);font-weight:800;letter-spacing:-.03em;
+    line-height:1.08;margin-bottom:1.25rem}
+  .lede{font-size:clamp(1.05rem,2.4vw,1.3rem);color:var(--dim);max-width:34rem;
+    margin:0 auto 2.25rem}
+  .cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    font-weight:600;padding:.95rem 2rem;border-radius:.85rem;transition:background .15s}
+  .cta:hover{background:var(--accent-hi)}
+  .note{margin-top:.9rem;font-size:.85rem;color:var(--dim)}
+  .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));
+    padding:1rem 0 5rem}
+  .card{background:var(--surface);border:1px solid var(--stroke);border-radius:1rem;
+    padding:1.6rem}
+  .card h3{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
+  .card p{color:var(--dim);font-size:.95rem}
+  .dot{width:2.1rem;height:2.1rem;border-radius:50%;background:rgba(230,57,46,.15);
+    display:grid;place-items:center;margin-bottom:1rem;color:var(--accent);font-size:1.05rem}
+  footer{border-top:1px solid var(--stroke);padding:2.5rem 0 3.5rem;color:var(--dim);
+    font-size:.9rem;display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+  footer a{color:var(--dim)}
+  footer a:hover{color:var(--text)}
+  .spacer{margin-left:auto}
+  @media (max-width:40rem){ nav{width:100%;margin-left:0;gap:1.1rem} .hero{padding:3.5rem 0 2.5rem} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="mark">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16"
+              stroke="#E6392E" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="12" cy="8" r="1.1" fill="#F2F2F4"/>
+        <path d="M9.2 11.4a2.8 2.8 0 0 1 5.6 0v4.1c0 .9-1.4.9-1.4 0 0 .9-1.4.9-1.4 0 0 .9-1.4.9-1.4 0 0 .9-1.4.9-1.4 0v-4.1Z" fill="#F2F2F4"/>
+      </svg>
+    </div>
+    <span class="brand">GymSensei</span>
+    <nav>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Know every machine<br>in your gym</h1>
+    <p class="lede">Point your camera at any machine. GymSensei tells you what it
+      trains, how to set it up, and builds a plan from the equipment you
+      actually have.</p>
+    <!-- Replace with your App Store link once the app is live -->
+    <a class="cta" href="#features">See what it does</a>
+    <p class="note">Coming soon to the App Store</p>
+  </section>
+
+  <section class="grid" id="features">
+    <div class="card">
+      <div class="dot">◎</div>
+      <h3>Scan any machine</h3>
+      <p>Recognises 90+ pieces of equipment — machines, cables, racks, free
+         weights and cardio. Every scan is saved.</p>
+    </div>
+    <div class="card">
+      <div class="dot">▶</div>
+      <h3>See the movement</h3>
+      <p>Hundreds of exercise animations with step-by-step setup, form cues and
+         the muscles each one works.</p>
+    </div>
+    <div class="card">
+      <div class="dot">✦</div>
+      <h3>Plans from your gym</h3>
+      <p>Pick a goal and how long you have. Plans only use equipment your gym
+         actually has, mixing machines, free weights and bodyweight.</p>
+    </div>
+    <div class="card">
+      <div class="dot">♪</div>
+      <h3>Guided sessions</h3>
+      <p>Follow your plan set by set, with a rest timer and an optional voice
+         coach that keeps working with the screen locked.</p>
+    </div>
+    <div class="card">
+      <div class="dot">↻</div>
+      <h3>Every set tracked</h3>
+      <p>Sets, volume and time saved to your history, syncing across your
+         devices when you sign in.</p>
+    </div>
+    <div class="card">
+      <div class="dot">⌘</div>
+      <h3>Four languages</h3>
+      <p>English, Español, Français and Українська — switch any time from
+         inside the app.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© <span id="y">2026</span> GymSensei</span>
+  <a href="support.html">Support</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <span class="spacer"></span>
+  <a href="mailto:support@gymsensei.app">support@gymsensei.app</a>
+</footer>
+
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

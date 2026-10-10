@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — GymSensei</title>
+<meta name="description" content="What GymSensei collects, why, and how to have it deleted.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0A0A0B;--surface:#161618;--stroke:#2A2A2E;--accent:#E6392E;
+        --accent-hi:#FF5A4C;--text:#F2F2F4;--dim:#96969E}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:radial-gradient(60rem 40rem at 85% 0%, rgba(104,34,28,.45), transparent 70%)}
+  .wrap{max-width:46rem;margin:0 auto;padding:0 1.5rem}
+  header{padding:1.75rem 0;border-bottom:1px solid var(--stroke)}
+  .bar{display:flex;align-items:center;gap:.75rem}
+  .brand{font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--text)}
+  nav{margin-left:auto;display:flex;gap:1.4rem;font-size:.92rem}
+  nav a{color:var(--dim);text-decoration:none}
+  nav a:hover{color:var(--text)}
+  h1{font-size:clamp(1.9rem,5vw,2.6rem);font-weight:800;letter-spacing:-.025em;
+    margin:3rem 0 .5rem}
+  .updated{color:var(--dim);font-size:.9rem;margin-bottom:2.5rem}
+  h2{font-size:1.15rem;font-weight:600;margin:2.5rem 0 .6rem}
+  h3{font-size:1rem;font-weight:600;margin:1.5rem 0 .4rem}
+  p,li{color:var(--dim)}
+  p{margin-bottom:.9rem}
+  ul{margin:0 0 1rem 1.25rem}
+  li{margin-bottom:.45rem}
+  a{color:var(--accent-hi)}
+  strong{color:var(--text);font-weight:600}
+  table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.93rem}
+  th,td{text-align:left;padding:.7rem .8rem;border-bottom:1px solid var(--stroke);
+    vertical-align:top}
+  th{color:var(--text);font-weight:600}
+  td{color:var(--dim)}
+  .box{background:var(--surface);border:1px solid var(--stroke);border-radius:1rem;
+    padding:1.4rem;margin:2rem 0}
+  .box p:last-child{margin-bottom:0}
+  footer{border-top:1px solid var(--stroke);margin-top:4rem;padding:2rem 0 3rem;
+    color:var(--dim);font-size:.9rem;display:flex;gap:1.4rem;flex-wrap:wrap}
+  footer a{color:var(--dim);text-decoration:none}
+  footer a:hover{color:var(--text)}
+</style>
+</head>
+<body>
+
+<header><div class="wrap bar">
+  <a class="brand" href="index.html">GymSensei</a>
+  <nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+</div></header>
+
+<main class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated 10 October 2026</p>
+
+  <p>GymSensei is an iPhone app that recognises gym equipment from a photo and
+     builds training plans around it. This policy explains what the app
+     collects, why, who it is shared with, and how to have it removed.</p>
+
+  <p>The app is published by <strong>[YOUR NAME OR COMPANY]</strong>,
+     <strong>[YOUR COUNTRY]</strong>. For any privacy question, write to
+     <a href="mailto:support@gymsensei.app">support@gymsensei.app</a>.</p>
+
+  <h2>The short version</h2>
+  <ul>
+    <li>You can use the app without an account.</li>
+    <li>Photos you scan are sent for analysis and are <strong>not stored</strong>
+        by us or by the analysis provider.</li>
+    <li>We do not show ads, we do not track you across other apps or websites,
+        and we do not sell or share your data for advertising.</li>
+    <li>You can ask us to delete everything, at any time.</li>
+  </ul>
+
+  <h2>What the app collects</h2>
+
+  <table>
+    <tr><th>Data</th><th>Why</th><th>Where it is stored</th></tr>
+    <tr>
+      <td>Apple user identifier, and your email if you choose to share it</td>
+      <td>To sign you in and sync your data between your devices</td>
+      <td>Firebase Authentication (Google)</td>
+    </tr>
+    <tr>
+      <td>Your scans, favourites, gyms, training plans and workout history</td>
+      <td>To show them back to you and keep them across devices</td>
+      <td>Cloud Firestore (Google)</td>
+    </tr>
+    <tr>
+      <td>Height, weight and training goal, if you enter them</td>
+      <td>To choose exercises and rep ranges for your plans</td>
+      <td>On your device, and in Cloud Firestore if you are signed in</td>
+    </tr>
+    <tr>
+      <td>Photos you scan or select</td>
+      <td>To recognise the equipment in them</td>
+      <td>Sent for analysis, then discarded — see below</td>
+    </tr>
+    <tr>
+      <td>A daily scan counter</td>
+      <td>To apply the free daily scan limit</td>
+      <td>Your device keychain, and Cloud Firestore if signed in</td>
+    </tr>
+    <tr>
+      <td>Your purchase status</td>
+      <td>To unlock PRO features</td>
+      <td>Apple, and a yes/no flag in Cloud Firestore</td>
+    </tr>
+  </table>
+
+  <p>If you never sign in, your data stays on your device and in an anonymous
+     record that is not linked to your name or email.</p>
+
+  <h3>What we do not collect</h3>
+  <p>No advertising identifiers, no location, no contacts, no HealthKit data,
+     no browsing activity, and no analytics about how you use the app.</p>
+
+  <h2>Photos and the AI analysis</h2>
+  <p>When you scan a machine, or use "Plan from a photo", that single image is
+     sent over an encrypted connection to <strong>OpenRouter</strong>, which
+     passes it to <strong>Google Gemini</strong> for analysis. What comes back
+     is a short, text-only result: the names of the equipment recognised, or a
+     list of muscle groups to prioritise.</p>
+  <p>The image is not saved by the app, is not written to our database, and is
+     not retained by the providers after the request completes. It is not used
+     to train any model.</p>
+  <p>The "Plan from a photo" feature returns training guidance only. It does
+     not estimate body fat, weight, measurements or fitness level, and does not
+     comment on your appearance.</p>
+
+  <h2>Who else processes your data</h2>
+  <ul>
+    <li><strong>Google (Firebase)</strong> — sign-in, database and server
+        functions. <a href="https://firebase.google.com/support/privacy">Firebase privacy</a></li>
+    <li><strong>OpenRouter</strong> and <strong>Google Gemini</strong> — image
+        analysis, as described above.
+        <a href="https://openrouter.ai/privacy">OpenRouter privacy</a></li>
+    <li><strong>Cloudflare (R2)</strong> — serves the exercise videos and
+        images. Standard server logs may record your IP address.
+        <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy</a></li>
+    <li><strong>Apple</strong> — handles all payments. We never see your card
+        details. <a href="https://www.apple.com/legal/privacy/">Apple privacy</a></li>
+  </ul>
+  <p>We do not sell your data, and we do not share it with anyone beyond the
+     providers above.</p>
+
+  <h2>Permissions the app asks for</h2>
+  <ul>
+    <li><strong>Camera</strong> — only to take a photo of equipment to scan.
+        Nothing is recorded or stored.</li>
+    <li><strong>Photo library</strong> — only to let you pick an existing photo
+        to scan. The app sees only the photo you choose.</li>
+  </ul>
+  <p>You can refuse or withdraw either permission in iOS Settings. The app
+     still works; you will just use the other input method.</p>
+
+  <h2>How long data is kept</h2>
+  <p>Your account data is kept for as long as you use the app. If you delete
+     the app without asking us to remove your data, the record stays until you
+     ask for deletion. Photos are never kept.</p>
+
+  <h2>Your rights</h2>
+  <p>You can ask us to show you what we hold, correct it, or delete all of it.
+     Email <a href="mailto:support@gymsensei.app">support@gymsensei.app</a> from
+     the address linked to your account and we will act within 30 days, free of
+     charge.</p>
+  <p>If you are in the EU, the UK or another region with equivalent rules, you
+     also have the right to object to processing, to request a portable copy of
+     your data, and to complain to your national data protection authority.</p>
+
+  <h2>Children</h2>
+  <p>GymSensei is not directed at children under 13, and we do not knowingly
+     collect data from them. If you believe a child has provided us with
+     personal data, email us and we will delete it.</p>
+
+  <h2>Not medical advice</h2>
+  <p>GymSensei provides general exercise information. It is not medical advice,
+     not a diagnosis, and not a substitute for a qualified trainer or
+     clinician. Train within your limits and seek professional advice if you
+     are unsure about an exercise or have an injury or health condition.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes in a way that affects you, we will update the date
+     at the top and, where the change is significant, tell you in the app.</p>
+
+  <div class="box">
+    <p><strong>Contact</strong></p>
+    <p><a href="mailto:support@gymsensei.app">support@gymsensei.app</a></p>
+  </div>
+</main>
+
+<footer class="wrap">
+  <a href="index.html">Home</a>
+  <a href="support.html">Support</a>
+  <a href="mailto:support@gymsensei.app">support@gymsensei.app</a>
+</footer>
+</body>
+</html>
