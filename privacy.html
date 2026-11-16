@@ -58,24 +58,25 @@
 
 <main class="wrap">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated 10 October 2026</p>
+  <p class="updated">Last updated 17 November 2026</p>
 
   <p>GymSensei is an iPhone app that recognises gym equipment from a photo and
      builds training plans around it. This policy explains what the app
      collects, why, who it is shared with, and how to have it removed.</p>
 
-  <p>The app is published by <strong>[YOUR NAME OR COMPANY]</strong>,
-     <strong>[YOUR COUNTRY]</strong>. For any privacy question, write to
-     <a href="mailto:support@gymsensei.app">support@gymsensei.app</a>.</p>
+  <p>The app is published by <strong>GymSensei</strong>,
+     <strong>Ukraine</strong>. For any privacy question, write to
+     <a href="mailto:alisasadkovska@gmail.com">alisasadkovska@gmail.com</a>.</p>
 
   <h2>The short version</h2>
   <ul>
     <li>You can use the app without an account.</li>
     <li>Photos you scan are sent for analysis and are <strong>not stored</strong>
-        by us or by the analysis provider.</li>
+        by us.</li>
     <li>We do not show ads, we do not track you across other apps or websites,
         and we do not sell or share your data for advertising.</li>
-    <li>You can ask us to delete everything, at any time.</li>
+    <li>You can delete your account and all of its data yourself, in the app,
+        at any time.</li>
   </ul>
 
   <h2>What the app collects</h2>
@@ -105,12 +106,14 @@
     <tr>
       <td>A daily scan counter</td>
       <td>To apply the free daily scan limit</td>
-      <td>Your device keychain, and Cloud Firestore if signed in</td>
+      <td>Your device keychain, and Cloud Firestore (kept by our server)</td>
     </tr>
     <tr>
-      <td>Your purchase status</td>
-      <td>To unlock PRO features</td>
-      <td>Apple, and a yes/no flag in Cloud Firestore</td>
+      <td>Your purchase status: PRO on or off, the product you bought, its
+          Apple transaction ID and expiry date</td>
+      <td>To unlock PRO features. Our server checks each purchase with Apple,
+          and the transaction ID keeps one purchase tied to one account</td>
+      <td>Apple, and Cloud Firestore</td>
     </tr>
   </table>
 
@@ -127,9 +130,10 @@
      passes it to <strong>Google Gemini</strong> for analysis. What comes back
      is a short, text-only result: the names of the equipment recognised, or a
      list of muscle groups to prioritise.</p>
-  <p>The image is not saved by the app, is not written to our database, and is
-     not retained by the providers after the request completes. It is not used
-     to train any model.</p>
+  <p>The image is not saved by the app and is not written to our database. We
+     have set OpenRouter not to log requests and to send them only to providers
+     that do not train on the data they receive. How OpenRouter and Google handle
+     a request is also covered by their own policies, linked below.</p>
   <p>The "Plan from a photo" feature returns training guidance only. It does
      not estimate body fat, weight, measurements or fitness level, and does not
      comment on your appearance.</p>
@@ -145,7 +149,9 @@
         images. Standard server logs may record your IP address.
         <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy</a></li>
     <li><strong>Apple</strong> — handles all payments. We never see your card
-        details. <a href="https://www.apple.com/legal/privacy/">Apple privacy</a></li>
+        details. Apple App Attest is also used, through Firebase App Check, to
+        confirm that requests come from the genuine app; it does not identify
+        you. <a href="https://www.apple.com/legal/privacy/">Apple privacy</a></li>
   </ul>
   <p>We do not sell your data, and we do not share it with anyone beyond the
      providers above.</p>
@@ -161,13 +167,21 @@
      still works; you will just use the other input method.</p>
 
   <h2>How long data is kept</h2>
-  <p>Your account data is kept for as long as you use the app. If you delete
-     the app without asking us to remove your data, the record stays until you
-     ask for deletion. Photos are never kept.</p>
+  <p>Your account data is kept for as long as you use the app. Deleting the app
+     alone does not remove it; delete your account first (see below) or email
+     us. Photos are never kept.</p>
+
+  <h2>Deleting your account</h2>
+  <p>In the app, go to <strong>Account → Delete account</strong>. This removes
+     your sign-in and all of your data in Cloud Firestore straight away, and
+     clears the app's data on your device. If you signed in with Apple, the
+     app's access to your Apple ID is revoked too. The scan counter in your
+     device keychain is kept, so deleting an account does not reset the free
+     daily limit; it holds only a date and a number.</p>
 
   <h2>Your rights</h2>
   <p>You can ask us to show you what we hold, correct it, or delete all of it.
-     Email <a href="mailto:support@gymsensei.app">support@gymsensei.app</a> from
+     Email <a href="mailto:alisasadkovska@gmail.com">alisasadkovska@gmail.com</a> from
      the address linked to your account and we will act within 30 days, free of
      charge.</p>
   <p>If you are in the EU, the UK or another region with equivalent rules, you
@@ -191,14 +205,14 @@
 
   <div class="box">
     <p><strong>Contact</strong></p>
-    <p><a href="mailto:support@gymsensei.app">support@gymsensei.app</a></p>
+    <p><a href="mailto:alisasadkovska@gmail.com">alisasadkovska@gmail.com</a></p>
   </div>
 </main>
 
 <footer class="wrap">
   <a href="index.html">Home</a>
   <a href="support.html">Support</a>
-  <a href="mailto:support@gymsensei.app">support@gymsensei.app</a>
+  <a href="mailto:alisasadkovska@gmail.com">alisasadkovska@gmail.com</a>
 </footer>
 </body>
 </html>

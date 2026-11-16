@@ -45,29 +45,13 @@ HSTS preload list so HTTPS is automatic.
 
 ## Email
 
-The pages and the app's Account screen both point at `support@gymsensei.app`,
-which does not exist yet. Two options:
+The pages and the app's Account screen point at `alisasadkovska@gmail.com`.
+If you later set up `support@gymsensei.app`, change it in all three pages *and*
+in `AccountView.swift`.
 
-- **Cloudflare Email Routing** — free, forwards `support@gymsensei.app` to your
-  Gmail. Needs the domain on Cloudflare DNS.
-- **Change the address** — if you'd rather not wait, replace
-  `support@gymsensei.app` in all three pages *and* in `AccountView.swift` with
-  an address you already control.
+## Publisher
 
-A reviewer may well email the support address, so make sure it reaches you
-before you submit.
-
-## Fill in before publishing
-
-`privacy.html` has two placeholders near the top:
-
-```
-[YOUR NAME OR COMPANY]
-[YOUR COUNTRY]
-```
-
-Both are required — a privacy policy with no identifiable publisher is a
-rejection risk, and in the EU it's a legal requirement.
+`privacy.html` names the publisher as GymSensei, Ukraine.
 
 ## About the privacy policy
 
